@@ -1,0 +1,92 @@
+name: NeuroChat Small (128) — 2 days
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */4 * * *'   # every 4h fallback in case restart missed
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355     # 5h55m — under GitHub's 6h hard limit
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check if already finished
+        id: check
+        run: |
+          if [ -f finished ]; then
+            echo "finished=true" >> $GITHUB_OUTPUT
+            echo "🎉 Training already complete! Delete 'finished' to retrain."
+          else
+            echo "finished=false" >> $GITHUB_OUTPUT
+            if [ -f model.json ]; then
+              STEPS=$(node -e "const d=JSON.parse(require('fs').readFileSync('model.json'));const n=d.net||d;console.log((n.trainSteps||0).toLocaleString())" 2>/dev/null || echo "?")
+              echo "📦 Resuming — steps: $STEPS"
+            else
+              echo "🆕 Fresh start"
+            fi
+            # Count books
+            if [ -d books ]; then
+              echo "📚 Books: $(ls books/*.txt 2>/dev/null | wc -l) files"
+              ls books/*.txt 2>/dev/null | while read f; do echo "   $(basename $f): $(du -sh $f | cut -f1)"; done
+            fi
+          fi
+
+      - name: Train
+        id: train
+        if: steps.check.outputs.finished == 'false'
+        run: |
+          node train-github.js \
+            --hours 4 \
+            --days 2 \
+            --save 60 \
+            --viz 300 \
+            --hidden 128 \
+            --embed 16 \
+            --ctx 32 \
+            --lr 0.01
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Commit checkpoint
+        if: steps.check.outputs.finished == 'false'
+        run: |
+          git config user.name  "NeuroChat Small"
+          git config user.email "small@neurochat.bot"
+          git add -A   # picks up model.json, train-state.json, finished (if created)
+          STEPS=$(node -e "const d=JSON.parse(require('fs').readFileSync('model.json'));const n=d.net||d;console.log((n.trainSteps||0).toLocaleString())" 2>/dev/null || echo "?")
+          EXIT="${{ steps.train.outputs.exit_code }}"
+          if [ -f finished ]; then
+            MSG="🎉 DONE — small model complete — ${STEPS} steps"
+          elif [ "$EXIT" = "2" ]; then
+            MSG="🔄 small checkpoint — ${STEPS} steps (continuing)"
+          else
+            MSG="✅ small checkpoint — ${STEPS} steps"
+          fi
+          git diff --cached --quiet || git commit -m "$MSG"
+          git push origin HEAD
+
+      - name: Restart if still training
+        if: steps.check.outputs.finished == 'false' && steps.train.outputs.exit_code == '2'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              workflow_id: 'train.yml',
+              ref: 'main',
+            });
+            console.log("🔄 Restarted — small model continuing");
