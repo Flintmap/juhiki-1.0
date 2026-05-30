@@ -1,0 +1,428 @@
+MATHEMATICS TRAINING BOOK
+
+Chapter 1: Algebra Fundamentals
+
+Variables and Expressions:
+- Variables: Symbols (x, y, z) representing unknown values
+- Constants: Fixed numerical values like 5, 3.14, -2
+- Terms: Individual parts of an expression
+- Like terms: Terms with the same variable (3x and 5x are like terms)
+- Coefficient: Number multiplying the variable (in 3x, 3 is the coefficient)
+
+Solving Linear Equations:
+
+Single-Step Equations:
+x + 5 = 12
+x = 12 - 5
+x = 7
+
+Two-Step Equations:
+2x + 3 = 11
+2x = 11 - 3
+2x = 8
+x = 4
+
+Multi-Step Equations:
+3(x + 2) = 15
+3x + 6 = 15
+3x = 15 - 6
+3x = 9
+x = 3
+
+Polynomial Operations:
+
+Addition:
+(2x + 3) + (x + 5) = 3x + 8
+
+Subtraction:
+(2x + 3) - (x + 5) = x - 2
+
+Multiplication:
+(x + 2)(x + 3) = x² + 5x + 6
+
+Chapter 2: Quadratic Equations
+
+Standard Form:
+ax² + bx + c = 0 (where a ≠ 0)
+
+Example:
+x² + 5x + 6 = 0
+
+Solving Methods:
+
+Factoring:
+x² + 5x + 6 = 0
+(x + 2)(x + 3) = 0
+x = -2 or x = -3
+
+Quadratic Formula:
+x = [-b ± √(b² - 4ac)] / (2a)
+
+For x² + 5x + 6 = 0:
+a = 1, b = 5, c = 6
+x = [-5 ± √(25 - 24)] / 2
+x = [-5 ± 1] / 2
+x = -2 or x = -3
+
+Graphing Parabolas:
+- Parabola shape opens up if a > 0
+- Parabola opens down if a < 0
+- Vertex: Highest or lowest point
+- Axis of symmetry: Vertical line through vertex
+- Y-intercept: Where graph crosses y-axis (c value)
+
+Chapter 3: Systems of Equations
+
+Two-Variable Systems:
+
+Substitution Method:
+y = 2x + 1
+x + y = 4
+
+Substitute first into second:
+x + (2x + 1) = 4
+3x + 1 = 4
+3x = 3
+x = 1
+
+Then: y = 2(1) + 1 = 3
+Solution: (1, 3)
+
+Elimination Method:
+2x + y = 5
+x - y = 1
+
+Add equations:
+3x = 6
+x = 2
+
+Substitute: 2 - y = 1, so y = 1
+Solution: (2, 1)
+
+Solution Types:
+- One solution: Lines intersect at one point
+- No solution: Lines are parallel (same slope)
+- Infinite solutions: Lines are identical (same line)
+
+Chapter 4: Functions
+
+Function Notation:
+f(x) = 2x + 3
+
+Read as: "f of x equals 2x plus 3"
+- Input (independent variable): x
+- Output (dependent variable): f(x)
+- f(2) = 2(2) + 3 = 7
+
+Common Functions:
+
+Linear: f(x) = mx + b (straight line)
+Example: f(x) = 2x + 3
+
+Quadratic: f(x) = ax² + bx + c (parabola)
+Example: f(x) = x² + 2x + 1
+
+Cubic: f(x) = ax³ + bx² + cx + d
+Example: f(x) = x³ - 2x
+
+Absolute Value: f(x) = |x| (V-shaped)
+
+Square Root: f(x) = √x (curved upward)
+
+Function Properties:
+- Domain: All possible input values
+- Range: All possible output values
+- Increasing: Function goes up from left to right
+- Decreasing: Function goes down from left to right
+- Maximum: Highest point on graph
+- Minimum: Lowest point on graph
+
+Chapter 5: Geometry
+
+Basic Shapes and Formulas:
+
+Triangle:
+Area = (1/2) × base × height
+Perimeter = a + b + c (sum of all sides)
+
+Rectangle:
+Area = length × width
+Perimeter = 2(length + width)
+
+Circle:
+Area = πr² (π times radius squared)
+Circumference = 2πr (or πd where d is diameter)
+
+Square:
+Area = side² (side times side)
+Perimeter = 4 × side
+
+Trapezoid:
+Area = (1/2) × (base1 + base2) × height
+Perimeter = sum of all four sides
+
+3D Shapes:
+
+Cube:
+Volume = side³
+Surface Area = 6 × side²
+
+Rectangular Prism:
+Volume = length × width × height
+Surface Area = 2(lw + lh + wh)
+
+Sphere:
+Volume = (4/3)πr³
+Surface Area = 4πr²
+
+Cylinder:
+Volume = πr²h
+Surface Area = 2πr² + 2πrh
+
+Cone:
+Volume = (1/3)πr²h
+Surface Area = πr² + πrl
+
+Angles:
+
+Angle Types:
+- Acute: Less than 90°
+- Right: Exactly 90°
+- Obtuse: Between 90° and 180°
+- Straight: Exactly 180°
+- Reflex: Between 180° and 360°
+
+Angle Sum Rules:
+- Sum of angles in triangle: 180°
+- Sum of angles in quadrilateral: 360°
+- Sum of angles in pentagon: 540°
+
+Chapter 6: Trigonometry
+
+Right Triangle Ratios (SOHCAHTOA):
+
+SOH = Sin(θ) = Opposite / Hypotenuse
+CAH = Cos(θ) = Adjacent / Hypotenuse
+TOA = Tan(θ) = Opposite / Adjacent
+
+Special Angles:
+
+30° angle:
+sin(30°) = 1/2 = 0.5
+cos(30°) = √3/2 ≈ 0.866
+tan(30°) = 1/√3 ≈ 0.577
+
+45° angle:
+sin(45°) = √2/2 ≈ 0.707
+cos(45°) = √2/2 ≈ 0.707
+tan(45°) = 1
+
+60° angle:
+sin(60°) = √3/2 ≈ 0.866
+cos(60°) = 1/2 = 0.5
+tan(60°) = √3 ≈ 1.732
+
+90° angle:
+sin(90°) = 1
+cos(90°) = 0
+tan(90°) = undefined
+
+Pythagorean Theorem:
+a² + b² = c²
+
+Where c is the hypotenuse and a, b are the other sides
+Used to find missing side lengths in right triangles
+
+Example:
+If a = 3 and b = 4, then:
+3² + 4² = c²
+9 + 16 = c²
+25 = c²
+c = 5
+
+Chapter 7: Exponents and Logarithms
+
+Exponent Rules:
+
+Product Rule: a^m × a^n = a^(m+n)
+Example: 2³ × 2² = 2⁵ = 32
+
+Quotient Rule: a^m / a^n = a^(m-n)
+Example: 2⁵ / 2² = 2³ = 8
+
+Power Rule: (a^m)^n = a^(m×n)
+Example: (2³)² = 2⁶ = 64
+
+Zero Exponent: a^0 = 1 (where a ≠ 0)
+Example: 5⁰ = 1
+
+Negative Exponent: a^(-n) = 1/a^n
+Example: 2⁻³ = 1/8 = 0.125
+
+Fractional Exponent: a^(1/n) = ⁿ√a
+Example: 8^(1/3) = ³√8 = 2
+
+Logarithms:
+
+Definition: log_a(x) = y means a^y = x
+"Log base a of x equals y"
+
+Common Logarithm: log₁₀(x) = log(x)
+Natural Logarithm: log_e(x) = ln(x)
+
+Logarithm Rules:
+
+Product Rule: log(a×b) = log(a) + log(b)
+Quotient Rule: log(a/b) = log(a) - log(b)
+Power Rule: log(a^n) = n × log(a)
+
+Chapter 8: Sequences and Series
+
+Arithmetic Sequences:
+Pattern: Each term increases by a constant amount
+
+Example: 2, 5, 8, 11, 14...
+Common difference: d = 3
+
+Finding Terms:
+nth term: aₙ = a₁ + (n-1)d
+For the 10th term: a₁₀ = 2 + (10-1)×3 = 29
+
+Sum of n terms: Sₙ = n/2 × (2a₁ + (n-1)d)
+
+Geometric Sequences:
+Pattern: Each term multiplies by a constant ratio
+
+Example: 2, 6, 18, 54...
+Common ratio: r = 3
+
+Finding Terms:
+nth term: aₙ = a₁ × r^(n-1)
+For the 5th term: a₅ = 2 × 3⁴ = 162
+
+Sum of n terms: Sₙ = a₁(1 - r^n) / (1 - r)
+
+Chapter 9: Statistics and Probability
+
+Descriptive Statistics:
+
+Mean (Average):
+Sum of all values ÷ Number of values
+Example: (3 + 5 + 7 + 9) ÷ 4 = 6
+
+Median:
+Middle value when data is ordered
+Example: 3, 5, 7, 9 → Median = 6
+
+Mode:
+Most frequently occurring value
+Example: 1, 2, 2, 3, 4, 4, 4 → Mode = 4
+
+Range:
+Maximum value - Minimum value
+Example: 9 - 3 = 6
+
+Standard Deviation:
+Measure of how spread out data is
+High deviation = data spread out
+Low deviation = data clustered together
+
+Probability:
+
+Probability Formula:
+P(A) = Number of favorable outcomes / Total number of outcomes
+
+Example: Probability of rolling a 3 on dice
+P(3) = 1/6 ≈ 0.167 or 16.7%
+
+Addition Rule:
+P(A or B) = P(A) + P(B) - P(A and B)
+
+Multiplication Rule:
+P(A and B) = P(A) × P(B)
+
+Complement:
+P(not A) = 1 - P(A)
+
+Chapter 10: Number Systems
+
+Integer Operations:
+
+Addition: -3 + 5 = 2
+Subtraction: -3 - 5 = -8
+Multiplication: -3 × 5 = -15
+Division: -15 / 5 = -3
+
+Fractions:
+
+Simplification: 6/8 = 3/4 (divide by GCD)
+
+Addition: 1/2 + 1/3 = 3/6 + 2/6 = 5/6
+
+Subtraction: 1/2 - 1/3 = 3/6 - 2/6 = 1/6
+
+Multiplication: 1/2 × 1/3 = 1/6
+
+Division: 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2
+
+Decimals and Percentages:
+
+Decimal to Percent: 0.25 = 25% (multiply by 100)
+
+Percent to Decimal: 45% = 0.45 (divide by 100)
+
+Percent Change: (new - old) / old × 100%
+
+Percentage of: 25% of 80 = 0.25 × 80 = 20
+
+Chapter 11: Word Problems Strategy
+
+Problem-Solving Steps:
+
+1. Read the problem carefully
+2. Identify what you're looking for
+3. Define variables for unknowns
+4. Write equations based on relationships
+5. Solve the equations
+6. Check if answer makes sense
+7. State the answer clearly
+
+Common Problem Types:
+
+Distance/Rate/Time:
+Distance = Rate × Time
+Example: If you travel 60 mph for 2 hours, distance = 120 miles
+
+Work Problems:
+Combined rate × time = job completed
+Example: Worker A completes 1/3 per hour, Worker B completes 1/2 per hour
+
+Mixture Problems:
+Concentration × amount = substance
+Example: Mix 10% solution with 20% solution
+
+Investment Problems:
+Principal × rate × time = interest
+Example: $1000 at 5% for 2 years = $100 interest
+
+Chapter 12: Pre-Calculus Concepts
+
+Limits:
+lim(x→a) f(x) = L
+"As x approaches a, f(x) approaches L"
+
+Example: lim(x→2) (x + 1) = 3
+
+Derivatives (Rate of Change):
+Notation: f'(x) or dy/dx
+
+Power Rule: d/dx(x^n) = n × x^(n-1)
+Example: d/dx(x³) = 3x²
+
+Chain Rule: d/dx[f(g(x))] = f'(g(x)) × g'(x)
+
+Integrals (Accumulation):
+∫ (integral symbol)
+
+Power Rule: ∫x^n dx = x^(n+1)/(n+1) + C
+Example: ∫x² dx = x³/3 + C
