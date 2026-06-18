@@ -1,0 +1,11 @@
+Replace this file with your own training text (or add more .txt files
+alongside it inside the data/ folder - they will all be combined).
+
+The more text you provide, the better the model can eventually learn.
+A few megabytes of plain text is a reasonable starting point; tens of
+megabytes is better if you have it. Plain conversational text, books,
+or chat logs all work as long as they're in a similar style to what
+you want the chatbot to produce.
+
+This placeholder is just here so the pipeline runs end-to-end on the
+first try - swap it out before you care about real results.

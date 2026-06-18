@@ -1,0 +1,35 @@
+name: Train chatbot model
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"   # fires every 4 hours
+  workflow_dispatch: {}      # lets you trigger a run manually from the Actions tab
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 230     # safety cutoff well inside the 4-hour cadence
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore checkpoint from previous run
+        uses: actions/cache@v4
+        with:
+          path: checkpoints
+          key: checkpoint-${{ github.run_id }}
+          restore-keys: |
+            checkpoint-
+
+      - name: Train
+        env:
+          TIME_BUDGET_SECONDS: "11700"   # ~3.25h, leaves buffer for setup + cache I/O
+          TOTAL_TARGET_STEPS: "50000"    # raise/lower based on your dataset size
+        run: python train.py
